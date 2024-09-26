@@ -1,0 +1,118 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background-color: #fff;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+main {
+    height: 100vh;
+    height: -webkit-fill-available;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.ApplicationContainer {
+    display: flex;
+}
+
+.ApplicationPageContent {
+    height: 100%;
+    width: 100%;
+    margin-left: 80px;
+}
+
+.ApplicationPageContent--SubMenu {
+    margin-left: 335px;
+}
+
+.SideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    
+    align-items: center;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.SubMenu {
+    position: fixed;
+    top: 0;
+    left: 80px;
+}
+
+.SideBar__Header {
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.SideBar__Footer {
+    padding: 15px 0;
+}
+
+.SideBar__Items {
+    width: 100%;
+    height: 100%;
+}
+
+.SideBar__Item {
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.SideBar__Item.SideBar__Item--active {
+    background-color: #000000;
+}
+
+.SideBar .SideBar__Item:hover {
+    background-color: #000000;
+}
+
+@media (min-width: 768px) {
+    .md\:w-192 {
+        width: 48rem;
+    }
+}
+
+.dropzone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    border-width: 2px;
+    border-radius: 2px;
+    border-color: #eeeeee;
+    border-style: dashed;
+    background-color: #fafafa;
+    color: #bdbdbd;
+    outline: none;
+    transition: border .24s ease-in-out;
+}
+
+.Toastify__toast--success {
+    background-color: rgb(5, 150, 105) !important;
+}
+
+.Toastify__toast--warning {
+    background-color: #fdd835 !important;
+}

@@ -1,0 +1,50 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.14.5",
+        "@tailwindcss/forms": "^0.2.1",
+        "alpinejs": "^2.7.3",
+        "autoprefixer": "^10.1.0",
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.2.1",
+        "postcss-import": "^12.0.1",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.35.2",
+        "sass-loader": "^12.1.0",
+        "tailwindcss": "^2.0.2"
+    },
+    "dependencies": {
+        "@date-io/moment": "^1.3.13",
+        "@fontsource/roboto": "^4.5.0",
+        "@material-ui/core": "^4.12.2",
+        "@material-ui/data-grid": "^4.0.0-alpha.37",
+        "@material-ui/icons": "^4.11.2",
+        "@material-ui/lab": "^4.0.0-alpha.60",
+        "@material-ui/pickers": "^3.3.10",
+        "ag-grid-community": "^25.3.0",
+        "ag-grid-react": "^25.3.0",
+        "mobx": "^6.3.2",
+        "mobx-react": "^7.2.0",
+        "moment": "^2.29.1",
+        "react": "^17.0.2",
+        "react-dnd": "^14.0.2",
+        "react-dnd-html5-backend": "^14.0.0",
+        "react-dom": "^17.0.2",
+        "react-dropzone": "^11.3.4",
+        "react-input-mask": "^3.0.0-alpha.2",
+        "react-router-dom": "^5.2.0",
+        "react-select": "^4.3.1",
+        "react-toastify": "^7.0.4"
+    }
+}

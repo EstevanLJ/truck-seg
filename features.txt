@@ -1,0 +1,65 @@
+Definições:
+    Lead: Potencial cliente
+    Deal: Potencial negócio
+
+Papéis
+    Operador: Usuário do sistema responsável por criar e desenvolver as oportunidades
+    Cotador:
+    Gerente:
+    Administrador:
+
+Features Especiais:
+    Hooks na mudança de status
+
+Tela Inicial Vendedor:
+    Barra de busca superior
+    Seleciona a pipline, filtros, agregadores (qtd, valor)
+    Visualização em kanban ou lista
+    Botão de adicionar "Deal"
+    Colunas com os status e os leads (nome, quantidade, valor total)
+    Cards de cada lead nos status. Dropdown com próximas/atrasadas atividades (pode marcar concluida) e cadastro
+    Footer com drag para: Deletar, Perdido, Fechado
+
+Tela do Lead:
+    Informações gerais
+    Linha do tempo com as atividades prontas e futuras
+    Adicionar novas tarefas
+    Anexar arquivos
+
+Relatório para gerente:
+    Deals iniciado por vendedor (qtd) (colunas horizontais ou pizza)
+    Deals perdidos por vendedor e razao (horizontal stacked)
+    Valor dos deals fechados (por mes, por vendedor)
+    COnversão do funil
+    Deals ganhos no trimestre
+    Últimos fechamentos (titulo, data, valor, vendedor)
+
+
+
+Tela de Leads:
+    Listagem de todos os leads (nome, proxima atividade, labels, fonte, data, donos)
+
+Cadastros:
+    Não Funcionais:
+        Usuário (User)
+        Grupo (Role)
+        Permissão (Permission)
+        Time (Team)
+        Documento
+
+    Funcionais:
+        País
+        Estado
+        Cidade
+        MotivoPerda
+
+        Pessoa
+        PessoaEndereco
+        PessoaContato
+
+        Lead (Pessoa, labels, fonte)
+        Deal (Título, cliente, valor, donos, fonte, datas)
+        Pipeline (Nome, Usuário(?))
+        DealStatus (Nome, ordem, pipeline, probabilidade, tempo para notificar)
+        DealActivity (Titulo, tipo, dataHora, dataHoraFeito, obervações, anexos)
+        DealDocument (Documento relacionado com aquela oportunidade)

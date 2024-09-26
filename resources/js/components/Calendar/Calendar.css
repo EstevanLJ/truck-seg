@@ -1,0 +1,137 @@
+.Calendar {
+    height: 100%;
+    width: 100%;
+}
+
+.Calendar-Body {
+    border-bottom: 1px solid #ddd;
+}
+
+.Calendar-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Calendar-Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Calendar-Title-Nav {
+    text-align: center;
+    font-size: 16px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.Calendar-Title-Nav:hover {
+    text-decoration: underline;
+}
+
+
+.Calendar-Title-Month {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    flex: 250px 0 0;
+}
+
+.Calendar-Days {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Calendar-Row {
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+
+    flex: 1;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Calendar-Day {
+    border-left: 1px solid #ddd;
+    height: 150px;
+    width: 14.2%;
+}
+
+.Calendar-Day.WeekMode {
+    height: 750px !important;
+}
+
+.Calendar-Day.Weekend {
+    background-color: #f0f0f0;
+}
+
+.Calendar-Day.Secondary * {
+    color: #888;
+}
+
+.Calendar-Day-Title {
+    text-align: center;
+    font-size: 12px;
+}
+
+.Calendar-Day-Week {
+    font-size: 14px;
+    text-align: center;
+}
+
+.Calendar-Day-Tasks {
+    margin-left: 3px;
+    overflow-y: scroll;
+    height: 132px;
+}
+
+.Calendar-Day-Tasks.WeekMode {
+    height: 732px !important;
+}
+
+.Calendar-Task {
+    display: flex;
+    cursor: pointer;
+}
+
+.Calendar-Task.Done {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.Calendar-Task-Dot {
+    display: inline-block;
+    height: 7px;
+    border-radius: 7px;
+    flex: 7px 0 0;
+}
+
+.Calendar-Task-Title {
+    /* flex: 1; */
+    margin-left: 5px;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.Calendar-Day-Tasks::-webkit-scrollbar {
+    width: 3px;
+}
+
+.Calendar-Day-Tasks::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.Calendar-Day-Tasks::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.Calendar-Day-Tasks::-webkit-scrollbar-thumb:hover {
+    background: #333;
+}

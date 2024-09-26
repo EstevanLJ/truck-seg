@@ -1,0 +1,175 @@
+Transportador:
+
+Seguro desejado (Radio) RCTR-C, RCF-DC, RCTR-VI
+
+Mercadorias transportadas:
+  Mestre/detalhe:
+    Tipo de mercadoria (Select)
+    Embalagens (Number)
+    %(Number)
+    Limite Máximo(Number)
+
+Especificar outros bens/mercadorias não relacionadas no quadro anterior
+  Mestre/Detalhe:
+    Mercadoria (Text)
+    % (Number)
+
+Principais Percursos
+  Mestre/Detalhe:
+    Origem (Text)
+    Destino (Text)
+    % (Number)
+
+Tipo percursos
+  Checkbox: Percurso urbano x suburbano, Percurso fluvial
+
+Valor Transportado nos últimos 6 meses:
+  Mestre/Detalhe:
+    Mês/Ano (Text)
+    Valor (Currency)
+
+Previsão de movimento para os próximos 12 meses
+  Currency
+
+
+Embarques
+  Valor médio por veículo/viagem (Currency)
+  Valor máximo por veículo/viagem (Currency)
+  Nº médio de embarques/mês (Number)
+  Limite pretendido RCTR-C (Currency)
+  Limite pretendido RCF-DC (Currency)
+  Composição da mercadoria no veículo:
+    Fracionada (Number)
+    Carga fechada - mercadorias (Number)
+
+Frota
+  Mestre/detalhe:
+    Tipo de Veículo (Select: Veículos próprios, Agregados, Autônomos)
+    Quantidade (Number)
+    Características (Tipo e Idade) (Text)
+
+Principais Embarcadores
+  Mestre/Detalhe:
+    Nome completo do embarcador (Text)
+    CNPJ (Text)
+    Possui seguro próprio (DDR) (Radio, Yes/No)
+
+Gerenciamento de risco
+  Possui instalado nos veículos algum tipo de sistema de rastreamento? (Radio, Yes/No)
+  Rastreador (Checkbox)
+  Sensores (Checkbox)
+  Atuadores (Checkbox)
+  Possui alguma empresa contratada para efetuar o gerenciamento de risco? (Radio, Yes/No)
+  Qual empresa? (Text)
+  Nome do contato na empresa (Text)
+  Telefone de Contato (Text)
+
+Quais os sinistros ocorridos nos últimos 24 meses (mesmo que não contratasse seguro), especificando, por evento
+  Mestre/detalhe
+    Valor do embarque (Currency)
+    Valor do prejuízo (Currency)
+    Causa do sinistro (Text)
+    Data da ocorrência (Date)
+    Embarcador(es) envolvido(s) (Text)
+
+Seguradora atual (Text)
+Vencimento (Date)
+Possui algum desconto/benefício? (Radio, Yes/No)
+Quais? (Text)
+Observações (Text)
+
+
+Apoio
+
+Tipo de Mercadoria (Nome, Ativo): goods_type            DONE
+Tipo de Rastreador (Nome, Ativo): tracker_type          DONE
+Tipo de Sensores (Nome, Ativo): sensor_type             DONE
+Tipo de Atuadores (Nome, Ativo): actuator_type          DONE
+Tipo de Veículo (Nome, Ativo): vehicle_type             DONE
+Medida de Segurança (Nome, Ativo): security_measure     DONE
+
+transp_form_response
+  type (string, 20)
+  quotation_id (biginteger)
+  user_id (biginteger)
+  version (integer)
+
+  urban_route (bool)
+  fluvial_route (bool)
+  next_12_months_movment_forecast (decimal 14, 2)
+  average_trip_value (decimal 14, 2)
+  maximum_trip_value (decimal 14, 2)
+  average_trips_month (integer)
+  intended_limit_rctr_c (decimal 14, 2)
+  intended_limit_rcf_dc (decimal 14, 2)
+  fractioned_composition (integer)
+  closed_composition (integer)
+  has_tracking_system (bool)
+  has_tracking_company (bool)
+  tracking_company (string)
+  tracking_company_contact (string)
+  tracking_company_phone (string)
+  current_insurance_company (string)
+  due_date (date)
+  discounts (string)
+  observations (text)
+
+transp_form_response_insurance_type ???
+  transp_form_response_id (biginteger)
+  insurance_type (string)
+  maximum_limit (integer)
+
+transp_form_response_goods_type
+  transp_form_response_id (biginteger)
+  goods_type_id (biginteger)
+  packages (integer)
+  percent (integer)
+  maximum_limit (integer)
+
+transp_form_response_goods_type_other
+  transp_form_response_id (biginteger)
+  goods_type (string)
+  percent (integer)
+
+transp_form_response_destinations
+  transp_form_response_id (biginteger)
+  origin (string)
+  destiny (string)
+  percentual (integer)
+
+transp_form_response_values_history
+  transp_form_response_id (biginteger)
+  month_year (string)
+  value (decimal 14, 2)
+
+transp_form_response_fleet
+  transp_form_response_id (biginteger)
+  fleet_origin (string)
+  quantity (integer)
+  characteristics (string)
+
+transp_form_response_shipper
+  transp_form_response_id (biginteger)
+  shipper_name (string)
+  document (string)
+  has_ddr (bool)
+
+transp_form_response_tracker
+  transp_form_response_id (biginteger)
+  tracker_type_id (biginteger)
+
+transp_form_response_sensor
+  transp_form_response_id (biginteger)
+  sensor_type_id (biginteger)
+
+transp_form_response_actuator
+  transp_form_response_id (biginteger)
+  actuator_type_id (biginteger)
+
+transp_form_response_accident
+  transp_form_response_id (biginteger)
+  goods_value (decimal 14, 2)
+  loss_value (decimal 14, 2)
+  cause (string)
+  date (date)
+  shippers_involved (string)
